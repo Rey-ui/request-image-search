@@ -94,7 +94,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* gap: 20px; */
+  flex-wrap: wrap;
+  gap: 8px;
   font-size: 16px;
   background-color: #1f1f1f;
   color: #dfdfdf;
@@ -143,3 +144,92 @@ body {
 .hidden {
   display: none;
 }
+/* =======================adaptive======================== */
+@media (max-width: 768px) {
+  .gallery__item {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+  .gallery__item-content {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .gallery__item-info {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+  .load-more {
+    background-color: #4e75ff;
+    border-radius: 5px;
+    padding: 14px 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 250ms;
+  }
+}
+@media (max-width: 540px) {
+  .form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .form label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .form label input {
+    color: #eaeaea;
+    padding: 14px 22px;
+    border: 1px solid #808080;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    outline: none;
+    transition: all 250ms;
+  }
+  .form label input:hover {
+    border: 1.3px solid rgb(99, 98, 98);
+  }
+  .form button {
+    width: 100%;
+  }
+  .gallery__item {
+    flex-basis: calc((100% - 20px) / 1);
+  }
+  .gallery__item-content {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .gallery__item-info {
+    flex-basis: calc((100% - 24px) / 4);
+    flex-wrap: nowrap;
+  }
+  .load-more {
+    background-color: #4e75ff;
+    border-radius: 5px;
+    padding: 14px 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 250ms;
+  }
+}
+/* @media (max-width: 540px) {
+  .catalog__title-wrapper {
+    gap: 10px;
+  }
+  .catalog__form-title {
+    font-size: 20px;
+  }
+  .catalog__form-input {
+    font-size: 18px;
+  }
+  .catalog__form-btn {
+    padding: 18px 50px;
+    font-size: 16px;
+  }
+} */
